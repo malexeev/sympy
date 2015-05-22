@@ -98,7 +98,7 @@ def pretty_try_use_unicode():
             # try to encode
             s.encode(encoding)
 
-    except UnicodeEncodeError:
+    except (UnicodeEncodeError, IOError):
         pass
     else:
         pretty_use_unicode(True)
